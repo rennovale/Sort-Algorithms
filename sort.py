@@ -43,7 +43,20 @@ def mergesort(numbers):
 	return numbers
 	
 def quicksort(numbers):
-	pass
+	def sort(numbers, left, right):
+		pivo = numbers[end]
+		wall = left - 1 
+		for j in range(left, right):
+			if pivo > numbers[j]:
+				wall += 1
+				numbers[j], numbers[wall] = numbers[wall], numbers[j]
+		numbers[end], numbers[wall+1] = numbers[wall+1], numbers[end]
+		return wall + 1, left, right
+
+	if begin < end:
+		wall, left, right = sort(numbers, begin, end)
+		quicksort(numbers, left, wall - 1)
+		quicksort(numbers, wall + 1, right)
 	
 def heapsort(numbers):
 	pass
