@@ -17,3 +17,40 @@ def insertionsort(numbers):
 			j -= 1
 		numbers[j] = value
 
+def mergesort(numbers):
+	pass
+	
+def quicksort(numbers):
+	pass
+	
+def heapsort(numbers):
+	pass
+
+def main():
+	list = []
+	while(True):
+		try:
+			x = input()
+			list.append(int(x))
+		except(EOFError):	
+			break
+	
+	if(sys.argv[1] == '1'):
+		selectionsort(list)
+	elif(sys.argv[1] == '2'):
+		insertionsort(list)
+	elif(sys.argv[1] == '3'):
+		mergesort(list)
+	elif(sys.argv[1] == '4'):
+		quicksort(list)
+	elif(sys.argv[1] == '5'):
+		heapsort(list)
+
+	for each in list:
+		print each
+
+
+if __name__ == '__main__':
+	main()
+	
+
