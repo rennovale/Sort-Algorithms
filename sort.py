@@ -59,7 +59,27 @@ def quicksort(numbers):
 		quicksort(numbers, wall + 1, right)
 	
 def heapsort(numbers):
-	pass
+	def heap(numbers, begin, end):
+		aux = numbers[begin]
+		j = 2*begin + 1
+		while j <= end:
+			if j < end:
+				if numbers[j] < numbers[j + 1]: # check the bigger son
+					j += 1
+			if aux < numbers[j]:
+				numbers[begin], begin = numbers[j], j
+				j = 2 * begin + 1
+			else:
+				j = end + 1 # force exit since aux is bigger than sons 
+		numbers[begin] = aux
+	
+	for i in range((len(numbers)-1)/2, -1, -1):
+		heap(numbers, i, len(numbers)-1)
+		
+	for i in range(len(numbers)-1, -1 , -1):
+		numbers[i], numbers[0] = numbers[0], numbers[i]
+		heap(numbers, 0, i - 1)
+
 
 def main():
 	list = []
