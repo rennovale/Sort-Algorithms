@@ -1,3 +1,5 @@
+import sys
+
 def selectionsort(numbers):
 	smaller = 0
 
@@ -18,7 +20,27 @@ def insertionsort(numbers):
 		numbers[j] = value
 
 def mergesort(numbers):
-	pass
+	if len(numbers) > 1:
+		numbers_1 = numbers[0:int(len(numbers)/2)]
+		numbers_2 = numbers[int(len(numbers)/2):]
+
+		numbers_1 = mergesort(numbers_1)
+		numbers_2 = mergesort(numbers_2)
+
+		new_list = []
+		while len(numbers_1) > 0 and len(numbers_2) > 0 :
+			if numbers_1[0] < numbers_2[0]:
+				new_list.append(numbers_1.pop(0))
+			else:
+				new_list.append(numbers_2.pop(0))
+
+		while len(numbers_1) > 0:
+			new_list.append(numbers_1.pop(0))
+		while len(numbers_2) > 0:
+			new_list.append(numbers_2.pop(0))
+
+		return new_list
+	return numbers
 	
 def quicksort(numbers):
 	pass
@@ -40,7 +62,7 @@ def main():
 	elif(sys.argv[1] == '2'):
 		insertionsort(list)
 	elif(sys.argv[1] == '3'):
-		mergesort(list)
+		list = mergesort(list)
 	elif(sys.argv[1] == '4'):
 		quicksort(list)
 	elif(sys.argv[1] == '5'):
