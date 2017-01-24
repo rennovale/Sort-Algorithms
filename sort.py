@@ -42,7 +42,7 @@ def mergesort(numbers):
 		return new_list
 	return numbers
 	
-def quicksort(numbers):
+def quicksort(numbers, begin, end):
 	def sort(numbers, left, right):
 		pivo = numbers[end]
 		wall = left - 1 
@@ -97,7 +97,7 @@ def main():
 	elif(sys.argv[1] == '3'):
 		list = mergesort(list)
 	elif(sys.argv[1] == '4'):
-		quicksort(list)
+		quicksort(list, 0, len(list)-1)
 	elif(sys.argv[1] == '5'):
 		heapsort(list)
 
