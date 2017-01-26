@@ -91,15 +91,15 @@ def main():
 			break
 	
 	if(sys.argv[1] == '1'):
-		selectionsort(list)
+		selectionsort(list[1:])
 	elif(sys.argv[1] == '2'):
-		insertionsort(list)
+		insertionsort(list[1:])
 	elif(sys.argv[1] == '3'):
-		list = mergesort(list)
+		list = mergesort(list[1:])
 	elif(sys.argv[1] == '4'):
-		quicksort(list, 0, len(list)-1)
+		quicksort(list[1:], 0, len(list[1:])-1)
 	elif(sys.argv[1] == '5'):
-		heapsort(list)
+		heapsort(list[1:])
 
 	for each in list:
 		print each

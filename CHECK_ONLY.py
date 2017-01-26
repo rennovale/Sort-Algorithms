@@ -7,7 +7,7 @@ def main():
 		except(EOFError):	
 			break
 			
-	list.sort()
+	list[1:].sort()
 	
 	for each in ['1', '2', '3', '4', '5']:
 		f = open('out' + each + '.txt', 'r')
