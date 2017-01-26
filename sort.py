@@ -90,16 +90,19 @@ def main():
 		except(EOFError):	
 			break
 	
+	
+	list = list[1:]
+	
 	if(sys.argv[1] == '1'):
-		selectionsort(list[1:])
+		selectionsort(list)
 	elif(sys.argv[1] == '2'):
-		insertionsort(list[1:])
+		insertionsort(list)
 	elif(sys.argv[1] == '3'):
-		list = mergesort(list[1:])
+		list = mergesort(list)
 	elif(sys.argv[1] == '4'):
-		quicksort(list[1:], 0, len(list[1:])-1)
+		quicksort(list, 0, len(list)-1)
 	elif(sys.argv[1] == '5'):
-		heapsort(list[1:])
+		heapsort(list)
 
 	for each in list:
 		print each
