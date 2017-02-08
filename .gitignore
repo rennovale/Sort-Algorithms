@@ -1,5 +1,10 @@
+.gitignore
 out1.txt
 out2.txt
 out3.txt
 out4.txt
 out5.txt
+janis.txt
+run.py
+sorting
+sorting.cpp
