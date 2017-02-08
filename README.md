@@ -10,6 +10,9 @@ Some algorithms to sort a simple list in Python 2.7
 				- Merge Sort     :  3
 				- Quick Sort     :  4
 				- Heap Sort      :  5 
+				- Count Sort     :  6
+				- Radix Sort     :  7
+				- Bucket Sort    :  8
 			F-> Filename with the numbers to be sorted.
 		
 			O-> Filename that will storage the numbers after sort algorithm.
