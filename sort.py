@@ -172,9 +172,8 @@ def radix(list, exp):
 	return output	
 
 def radixsort(list):
-	
+	n_list = []
 	if(min(list) <0):
-		n_list = []
 		x = 0
 		while x != len(list):
 			if (list[x] < 0):
